@@ -10,14 +10,14 @@ configure(() => {
 
 const StorybookUI = getStorybookUI({
   port: 9001,
-  host: "localhost",
+  host: "192.168.1.48",
   onDeviceUI: true,
   asyncStorage: require("react-native").AsyncStorage,
 })
 
 export const StorybookUIRoot: FunctionComponent = () => {
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       await initFonts()
       if (typeof __TEST__ === "undefined" || !__TEST__) {
         const Reactotron = require("../app/services/reactotron")
