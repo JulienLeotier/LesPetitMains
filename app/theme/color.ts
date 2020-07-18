@@ -20,6 +20,7 @@ export const color = {
    * by their under-powered GPUs.
    */
   transparent: "rgba(0, 0, 0, 0)",
+
   /**
    * The screen background.
    */

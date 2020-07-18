@@ -12,6 +12,11 @@
     "readyForLaunch": "Ready for launch.",
     "continue": "CONTINUE"
   },
+  "ConnexionScreen": {
+    "poweredBy": "POWERED BY Ju",
+    "readyForLaunch": "Ready for launch.",
+    "continue": "CONTINUE"
+  },
   "demoScreen": {
     "howTo": "HOW TO",
     "title": "What’s In This Stack?",
