@@ -7,7 +7,7 @@ import { color } from "../../theme"
 
 export const ConnexionScreen: Component = observer(function ConnexionScreen() {
     const navigation = useNavigation()
-    const nextScreen = () => navigation.navigate("demo")
+    const nextScreen = () => navigation.navigate("welcom")
 
     return (
         <View>
@@ -15,14 +15,13 @@ export const ConnexionScreen: Component = observer(function ConnexionScreen() {
             <Screen preset="scroll" backgroundColor={color.transparent}>
                 <Header headerTx="ConnexionScreen.poweredBy" />
                 <Text>
-                    <Text text="Your new app, " />
+                    <Text text="Connexion, " />
                     <Text text="almost" />
                     <Text text="!" />
                 </Text>
                 <Text preset="header" tx="ConnexionScreen.readyForLaunch" />
                 <Text>
-                    This probably isn't what your app is going to look like. Unless your designer handed you
-                    this screen and, in that case, congrats! You're ready to ship.
+                    I'm a connexion screen
           </Text>
                 <Text>
                     For everyone else, this is where you'll see a live preview of your fully functioning app
