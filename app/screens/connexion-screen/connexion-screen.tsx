@@ -1,63 +1,39 @@
 import React, { FunctionComponent as Component } from "react"
-import { View, ViewStyle, TextStyle, SafeAreaView } from "react-native"
+import { View, ViewStyle, TextStyle, SafeAreaView, Image, ImageStyle } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import { observer } from "mobx-react-lite"
-import { Button, Header, Screen, Text, Wallpaper } from "../../components"
+import { Button, Screen, Wallpaper } from "../../components"
 import { color, spacing, typography } from "../../theme"
 
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
-    backgroundColor: color.transparent,
-    paddingHorizontal: spacing[4],
+    height: "100%",
+    width: "100%",
+    borderBottomColor: "#9a7f79",
+    borderBottomWidth: 1
 }
 const TEXT: TextStyle = {
     color: color.palette.white,
     fontFamily: typography.primary,
 }
 const BOLD: TextStyle = { fontWeight: "bold" }
-const HEADER: TextStyle = {
-    paddingTop: spacing[3],
-    paddingBottom: spacing[4] + spacing[1],
-    paddingHorizontal: 0,
-}
-const HEADER_TITLE: TextStyle = {
-    ...TEXT,
-    ...BOLD,
-    fontSize: 12,
-    lineHeight: 15,
-    textAlign: "center",
-    letterSpacing: 1.5,
-}
-const TITLE_WRAPPER: TextStyle = {
-    ...TEXT,
-    textAlign: "center",
-}
-const TITLE: TextStyle = {
-    ...TEXT,
-    ...BOLD,
-    fontSize: 28,
-    lineHeight: 38,
-    textAlign: "center",
-}
-const ALMOST: TextStyle = {
-    ...TEXT,
-    ...BOLD,
-    fontSize: 26,
-    fontStyle: "italic",
-}
 
-const CONTENT: TextStyle = {
-    ...TEXT,
-    color: "#BAB6C8",
-    fontSize: 15,
-    lineHeight: 22,
-    marginBottom: spacing[5],
-}
-const CONTINUE: ViewStyle = {
+const CONNEXION: ViewStyle = {
     paddingVertical: spacing[4],
     paddingHorizontal: spacing[4],
-    backgroundColor: "#5D2555",
+    backgroundColor: "#633830",
+}
+
+const NEW_CONNEXION: ViewStyle = {
+    paddingVertical: spacing[4],
+    paddingHorizontal: spacing[4],
+    backgroundColor: "#8E5044",
+}
+const PRO_CONNEXION: ViewStyle = {
+    paddingVertical: spacing[4],
+    paddingHorizontal: spacing[4],
+    backgroundColor: "#B36F61",
 }
 const CONTINUE_TEXT: TextStyle = {
     ...TEXT,
@@ -65,42 +41,73 @@ const CONTINUE_TEXT: TextStyle = {
     fontSize: 13,
     letterSpacing: 2,
 }
-const FOOTER: ViewStyle = { backgroundColor: "#20162D" }
+const FOOTER: ViewStyle = { backgroundColor: "#FFFFFF", height: "50%" }
 const FOOTER_CONTENT: ViewStyle = {
-    paddingVertical: spacing[4],
-    paddingHorizontal: spacing[4],
+    marginTop: 50,
+    paddingVertical: spacing[2],
+    paddingHorizontal: spacing[6],
 }
+const FOOTER_BOTTOM: ViewStyle = {
+    paddingHorizontal: spacing[6],
+    paddingVertical: spacing[6]
+}
+const FOOTER_BLOCK: ViewStyle = {
+    paddingHorizontal: spacing[6],
+}
+const fouet = require("./fouet.png")
+const pastry = require("./patisier.png")
+const FOUET: ImageStyle = {
+    width: "100%",
+    height: "100%",
+    maxWidth: "100%"
+}
+const PASTRY: ImageStyle = {
+    paddingVertical: spacing[6],
+    alignSelf: "center",
+    width: "20%",
+    height: "30%",
+}
+
 export const ConnexionScreen: Component = observer(function ConnexionScreen() {
     const navigation = useNavigation()
-    const nextScreen = () => navigation.navigate("welcome")
+    const connexion = () => navigation.navigate("clientConnexion")
+    const newConnexion = () => navigation.navigate("clientInscription")
+    const proConnexion = () => navigation.navigate("welcome")
+
 
     return (
         <View style={FULL}>
             <Wallpaper />
-            <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
-                <Header headerTx="ConnexionScreen.poweredBy" style={HEADER} titleStyle={HEADER_TITLE} />
-                <Text style={TITLE_WRAPPER}>
-                    <Text style={TITLE} text="my app" />
-                    <Text style={ALMOST} text="almost" />
-                    <Text style={TITLE} text="!" />
-                </Text>
-                <Text style={TITLE} preset="header" tx="ConnexionScreen.readyForLaunch" />
-                <Text style={CONTENT}>
-                    This probably isn't what your app is going to look like. Unless your designer handed you
-                    this screen and, in that case, congrats! You're ready to ship.
-          </Text>
-                <Text style={CONTENT}>
-                    For everyone else, this is where you'll see a live preview of your fully functioning app
-                    using Ignite.
-          </Text>
+            <Screen style={CONTAINER} preset="scroll" backgroundColor={"#FFFFFF"}>
+                <View style={CONTAINER}>
+                    <Image source={fouet} style={FOUET} />
+
+                </View>
             </Screen>
             <SafeAreaView style={FOOTER}>
                 <View style={FOOTER_CONTENT}>
                     <Button
-                        style={CONTINUE}
+                        style={CONNEXION}
                         textStyle={CONTINUE_TEXT}
-                        tx="ConnexionScreen.continue"
-                        onPress={nextScreen}
+                        tx="ConnexionScreen.connexion"
+                        onPress={connexion}
+                    />
+                </View>
+                <View style={FOOTER_BLOCK}>
+                    <Button
+                        style={NEW_CONNEXION}
+                        textStyle={CONTINUE_TEXT}
+                        tx="ConnexionScreen.newConnexion"
+                        onPress={newConnexion}
+                    />
+                </View>
+                <View style={FOOTER_BOTTOM}>
+                    <Image source={pastry} style={PASTRY} />
+                    <Button
+                        style={PRO_CONNEXION}
+                        textStyle={CONTINUE_TEXT}
+                        tx="ConnexionScreen.proConnexion"
+                        onPress={proConnexion}
                     />
                 </View>
             </SafeAreaView>

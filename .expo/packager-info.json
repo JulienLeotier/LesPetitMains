@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 484605,
+  "packagerPid": 1078944,
   "webpackServerPort": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerNgrokUrl": "https://uz-wmw.ignis33.lespetitmains.exp.direct",
+  "packagerNgrokUrl": "https://packager.uz-wmw.ignis33.lespetitmains.exp.direct",
+  "ngrokPid": 721753
 }

@@ -1,3 +1,6 @@
 export * from "./welcome-screen/welcome-screen"
 export * from "./demo-screen/demo-screen"
 export * from "./connexion-screen/connexion-screen"
+export * from "./clientConnexionScreen-screen"
+export * from "./clientInscriptionScreen-screen"
+export * from "./proConnexion-screen"

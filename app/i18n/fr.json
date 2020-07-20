@@ -1,0 +1,56 @@
+{
+    "common": {
+        "ok": "OK!",
+        "cancel": "Cancel",
+        "back": "Back"
+    },
+    "errors": {
+        "invalidEmail": "Invalid email address."
+    },
+    "welcomeScreen": {
+        "poweredBy": "POWERED BY BOWSER",
+        "readyForLaunch": "Ready for launch.",
+        "continue": "CONTINUE"
+    },
+    "ConnexionScreen": {
+        "poweredBy": "POWERED BY Ju",
+        "readyForLaunch": "Ready for launch.",
+        "connexion": "Déja Client ? je me connecte",
+        "newConnexion": "Nouveau Client ? je m'inscrits",
+        "proConnexion": "Le coin des artisants"
+    },
+    "demoScreen": {
+        "howTo": "HOW TO",
+        "title": "What’s In This Stack?",
+        "tagLine": "Congratulations, you’ve got a very advanced React Native app template here.  Take advantage of this boilerplate!",
+        "reactotron": "Demo Reactotron",
+        "androidReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running, run adb reverse tcp:9090 tcp:9090 from your terminal, and reload the app.",
+        "iosReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app."
+    },
+    "storybook": {
+        "placeholder": "Placeholder",
+        "field": "Field"
+    },
+    "clientConnexionScreenScreen": {
+        "header": "Connexion",
+        "register": "Pas encore inscrit ?",
+        "facebook": "Connexion avec Facebook",
+        "google": "Connexion avec Google",
+        "mail": "Adresse e-mail",
+        "password": "Mot de passe",
+        "go": "C'est parti !",
+        "forgetPassword": "Mot de passe oublié ? ",
+        "stayCo": "Rester Connecté(e)"
+    },
+    "clientInscriptionScreenScreen": {
+        "header": "Inscription",
+        "register": "Déjà client ?",
+        "facebook": "S'inscription avec Facebook",
+        "google": "S'inscription avec Google",
+        "mail": "Adresse e-mail",
+        "password": "Mot de passe",
+        "go": "C'est parti !",
+        "rePassword": "Confirmer le mot de passe",
+        "stayCo": "J'accepte les conditions générale d'utilisation"
+    }
+}

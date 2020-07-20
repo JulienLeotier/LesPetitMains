@@ -15,7 +15,9 @@
   "ConnexionScreen": {
     "poweredBy": "POWERED BY Ju",
     "readyForLaunch": "Ready for launch.",
-    "continue": "CONTINUE"
+    "connexion": "Already Client ? i'm conneting",
+    "newConnexion": "new Client ? i'm register",
+    "proConnexion": "The pastry"
   },
   "demoScreen": {
     "howTo": "HOW TO",
@@ -28,5 +30,11 @@
   "storybook": {
     "placeholder": "Placeholder",
     "field": "Field"
+  },
+  "clientConnexionScreenScreen": {
+    "header": "connexion",
+    "register": "Not registered",
+    "facebook": "Connexion with Facebook",
+    "google": "Connexion with Google"
   }
 }
