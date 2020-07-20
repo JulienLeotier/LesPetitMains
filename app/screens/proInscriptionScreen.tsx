@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import { ViewStyle, TextStyle, View, ImageBackground, Dimensions, Image, ImageStyle, TouchableOpacity } from "react-native"
+import { ViewStyle, TextStyle, View, Image, ImageStyle, TouchableOpacity } from "react-native"
 import { Button, Screen, Text } from "../components"
 import { color, spacing } from "../theme"
-import { Input } from 'react-native-elements'
+import { Input, CheckBox } from 'react-native-elements'
 
 
 
@@ -18,6 +18,11 @@ const TEXT_FORMS: TextStyle = {
     color: "#633830",
     fontWeight: "bold",
     paddingHorizontal: spacing[6],
+
+}
+const TEXT_CHECK: TextStyle = {
+    color: "#633830",
+    fontWeight: "bold",
 
 }
 const TEXT_REGISTER: TextStyle = {
@@ -41,7 +46,7 @@ const FOOTER_GO: ViewStyle = {
 }
 const GO: ViewStyle = {
     paddingVertical: spacing[4],
-    paddingHorizontal: spacing[4],
+    paddingHorizontal: spacing[2],
     backgroundColor: "#8E5044",
 }
 
@@ -52,12 +57,13 @@ const pastry = require("./connexion-screen/patisier.png")
 const INPUT: ViewStyle = {
     paddingHorizontal: spacing[6]
 }
-const image = require("./connexion-screen/fouet.png")
-export class ProInscriptionScreen extends Component<{ navigation }, { y: number }> {
+// const image = require("./connexion-screen/fouet.png")
+export class ProInscriptionScreen extends Component<{ navigation }, { y: number, checked: boolean }> {
     constructor(props) {
         super(props)
         this.state = {
-            y: 0
+            y: 0,
+            checked: false
         }
     }
     find_dimesions = (layout) => {
@@ -112,24 +118,32 @@ export class ProInscriptionScreen extends Component<{ navigation }, { y: number 
                         placeholder='Mot de passe'
                     />
                 </View>
-                <ImageBackground source={image} style={{
+
+                <CheckBox
+                    title="J'accepte les conditions générales d'utilisation"
+                    textStyle={TEXT_CHECK}
+                    containerStyle={{
+                        backgroundColor: 'transparent',
+                        borderColor: 'transparent'
+                    }}
+                    checked={this.state.checked}
+                    onPress={() => this.setState({ checked: !this.state.checked })}
+                />
+                {/* <ImageBackground source={image} style={{
                     marginTop: 0,
                     flex: 1,
                     width: "100%",
                     height: Dimensions.get('window').height - this.state.y
-                }}>
-
-                    <Text style={TEXT_FORMS} tx="proInscription.stayCo" />
-
-                    <View style={FOOTER_GO}>
-                        <Button
-                            style={GO}
-                            textStyle={GO_TEXT}
-                            tx="proInscription.go"
-                            onPress={() => { }}
-                        />
-                    </View>
-                </ImageBackground>
+                }}> */}
+                <View style={FOOTER_GO}>
+                    <Button
+                        style={GO}
+                        textStyle={GO_TEXT}
+                        tx="proInscription.go"
+                        onPress={() => { }}
+                    />
+                </View>
+                {/* </ImageBackground> */}
             </Screen >
         )
     }

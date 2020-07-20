@@ -32,7 +32,7 @@ const NEW_CONNEXION: ViewStyle = {
 }
 const PRO_CONNEXION: ViewStyle = {
     paddingVertical: spacing[4],
-    paddingHorizontal: spacing[4],
+    paddingHorizontal: spacing[5],
     backgroundColor: "#B36F61",
 }
 const CONTINUE_TEXT: TextStyle = {
@@ -45,14 +45,14 @@ const FOOTER: ViewStyle = { backgroundColor: "#FFFFFF", height: "50%" }
 const FOOTER_CONTENT: ViewStyle = {
     marginTop: 50,
     paddingVertical: spacing[2],
-    paddingHorizontal: spacing[6],
+    paddingHorizontal: spacing[5],
 }
 const FOOTER_BOTTOM: ViewStyle = {
-    paddingHorizontal: spacing[6],
+    paddingHorizontal: spacing[5],
     paddingVertical: spacing[6]
 }
 const FOOTER_BLOCK: ViewStyle = {
-    paddingHorizontal: spacing[6],
+    paddingHorizontal: spacing[5],
 }
 const fouet = require("./fouet.png")
 const pastry = require("./patisier.png")

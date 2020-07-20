@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 // import { observer } from "mobx-react-lite"
-import { ViewStyle, TextStyle, View, ImageBackground, Dimensions, Image, ImageStyle } from "react-native"
+import { ViewStyle, TextStyle, View, Image, ImageStyle } from "react-native"
 import { Button, Screen, Text } from "../components"
 import { color, spacing } from "../theme"
-import { Input } from 'react-native-elements'
+import { Input, CheckBox } from 'react-native-elements'
 import { TouchableOpacity } from "react-native-gesture-handler"
 
 
@@ -22,6 +22,7 @@ const TEXT_FORMS: TextStyle = {
   paddingHorizontal: spacing[6],
 
 }
+
 const TEXT_REGISTER: TextStyle = {
   color: "#633830",
   alignSelf: "center",
@@ -55,14 +56,13 @@ const PASTRY: ImageStyle = {
 }
 const pastry = require("./connexion-screen/patisier.png")
 
-const image = require("./connexion-screen/fouet.png")
 
-
-export class ProConnexionScreen extends Component<{ navigation }, { y: number }> {
+export class ProConnexionScreen extends Component<{ navigation }, { y: number, checked: boolean }> {
   constructor(props) {
     super(props)
     this.state = {
-      y: 0
+      y: 0,
+      checked: false
     }
   }
   find_dimesions = (layout) => {
@@ -106,26 +106,38 @@ export class ProConnexionScreen extends Component<{ navigation }, { y: number }>
             placeholder='Mot de passe'
           />
         </View>
-        <ImageBackground
+
+
+        <Text style={TEXT_FORMS} tx="proConexion.forgetPassword" />
+        <CheckBox
+          title="Rester connecté(e)"
+          textStyle={{
+            color: "#8E5044",
+            fontWeight: "bold"
+          }}
+          containerStyle={{
+            backgroundColor: 'transparent',
+            borderColor: 'transparent'
+          }}
+          checked={this.state.checked}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+        {/* <ImageBackground
           source={image}
           style={{
             marginTop: 0,
             width: "100%",
             height: Dimensions.get('window').height - this.state.y
-          }}>
-
-          <Text style={TEXT_FORMS} tx="proConexion.forgetPassword" />
-          <Text style={TEXT_FORMS} tx="proConexion.stayCo" />
-
-          <View style={FOOTER_GO}>
-            <Button
-              style={GO}
-              textStyle={GO_TEXT}
-              tx="proConexion.go"
-              onPress={() => { }}
-            />
-          </View>
-        </ImageBackground>
+          }}> */}
+        <View style={FOOTER_GO}>
+          <Button
+            style={GO}
+            textStyle={GO_TEXT}
+            tx="proConexion.go"
+            onPress={() => { }}
+          />
+        </View>
+        {/* </ImageBackground> */}
       </Screen >
     )
   }

@@ -15,9 +15,9 @@
     "ConnexionScreen": {
         "poweredBy": "POWERED BY Ju",
         "readyForLaunch": "Ready for launch.",
-        "connexion": "Déja Client ? je me connecte",
-        "newConnexion": "Nouveau Client ? je m'inscrits",
-        "proConnexion": "Le coin des artisants"
+        "connexion": "Déja client ? Je me connecte",
+        "newConnexion": "Nouveau client ? Je m'inscris",
+        "proConnexion": "Le coin des artisans"
     },
     "demoScreen": {
         "howTo": "HOW TO",
@@ -33,46 +33,42 @@
     },
     "clientConnexionScreenScreen": {
         "header": "Connexion",
-        "register": "Pas encore inscrit ?",
+        "register": "Pas encore client(e) ?",
         "facebook": "Connexion avec Facebook",
         "google": "Connexion avec Google",
         "mail": "Adresse e-mail",
         "password": "Mot de passe",
         "go": "C'est parti !",
         "forgetPassword": "Mot de passe oublié ? ",
-        "stayCo": "Rester Connecté(e)"
+        "stayCo": "Rester connecté(e)"
     },
     "proConexion": {
         "header": "Connexion",
-        "register": "Pas encore inscrit ?",
-        "facebook": "Connexion avec Facebook",
-        "google": "Connexion avec Google",
+        "register": "Pas encore inscrit(e) ?",
         "mail": "Adresse e-mail",
         "password": "Mot de passe",
         "go": "C'est parti !",
         "forgetPassword": "Mot de passe oublié ? ",
-        "stayCo": "Rester Connecté(e)"
+        "stayCo": "Rester connecté(e)"
     },
     "clientInscriptionScreenScreen": {
         "header": "Inscription",
-        "register": "Déjà client ?",
-        "facebook": "S'inscription avec Facebook",
-        "google": "S'inscription avec Google",
+        "register": "Déjà client(e) ?",
+        "facebook": "S'inscrire avec Facebook",
+        "google": "S'inscrire avec Google",
         "mail": "Adresse e-mail",
         "password": "Mot de passe",
         "go": "C'est parti !",
         "rePassword": "Confirmer le mot de passe",
-        "stayCo": "J'accepte les conditions générale d'utilisation"
+        "stayCo": "J'accepte les conditions générales d'utilisation"
     },
     "proInscription": {
         "header": "Inscription",
-        "register": "Déjà client ?",
-        "facebook": "S'inscription avec Facebook",
-        "google": "S'inscription avec Google",
+        "register": "Déjà inscrit(e) ?",
         "mail": "Adresse e-mail",
         "password": "Mot de passe",
-        "go": "C'est parti !",
+        "go": "Je me lance !",
         "rePassword": "Confirmer le mot de passe",
-        "stayCo": "J'accepte les conditions générale d'utilisation"
+        "stayCo": "J'accepte les conditions générales d'utilisation"
     }
 }

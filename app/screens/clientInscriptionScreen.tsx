@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import { ViewStyle, TextStyle, View, ImageBackground, Dimensions } from "react-native"
+import { ViewStyle, TextStyle, View, TouchableOpacity } from "react-native"
 import { Button, Screen, Text } from "../components"
 import { color, spacing } from "../theme"
 import { FontAwesome } from '@expo/vector-icons'
-import { Input } from 'react-native-elements'
+import { Input, CheckBox } from 'react-native-elements'
 
 
 
@@ -81,12 +81,12 @@ const ICON_SPACE: ViewStyle = {
 const INPUT: ViewStyle = {
   paddingHorizontal: spacing[6]
 }
-const image = require("./connexion-screen/fouet.png")
-export class ClientInscriptionScreen extends Component<{}, { y: number }> {
+export class ClientInscriptionScreen extends Component<{ navigation }, { y: number, checked: boolean }> {
   constructor(props) {
     super(props)
     this.state = {
-      y: 0
+      y: 0,
+      checked: false
     }
   }
   find_dimesions = (layout) => {
@@ -98,11 +98,16 @@ export class ClientInscriptionScreen extends Component<{}, { y: number }> {
     this.setState({ y: height })
   }
   render() {
+    const { navigation } = this.props
     return (
       <Screen style={ROOT} preset="scroll">
         <View onLayout={(event) => { this.find_dimesions(event.nativeEvent.layout) }}>
           <Text style={TEXT} preset="header" tx="clientInscriptionScreenScreen.header" />
-          <Text style={TEXT_REGISTER} tx="clientInscriptionScreenScreen.register" />
+          <TouchableOpacity
+            onPress={() => navigation.navigate('clientConnexion')}
+          >
+            <Text style={TEXT_REGISTER} tx="clientInscriptionScreenScreen.register" />
+          </TouchableOpacity>
           <View style={FOOTER_CONTENT}>
             <Button
               style={CONNEXION}
@@ -160,24 +165,36 @@ export class ClientInscriptionScreen extends Component<{}, { y: number }> {
             placeholder='Mot de passe'
           />
         </View>
-        <ImageBackground source={image} style={{
+
+
+        <CheckBox
+          title="J'accepte les conditions générales d'utilisation"
+          textStyle={{
+            color: "#8E5044",
+            fontWeight: "bold"
+          }}
+          containerStyle={{
+            backgroundColor: 'transparent',
+            borderColor: 'transparent'
+          }}
+          checked={this.state.checked}
+          onPress={() => this.setState({ checked: !this.state.checked })}
+        />
+        {/* <ImageBackground source={image} style={{
           marginTop: 0,
           flex: 1,
           width: "100%",
           height: Dimensions.get('window').height - this.state.y
-        }}>
-
-          <Text style={TEXT_FORMS} tx="clientInscriptionScreenScreen.stayCo" />
-
-          <View style={FOOTER_GO}>
-            <Button
-              style={GO}
-              textStyle={GO_TEXT}
-              tx="clientInscriptionScreenScreen.go"
-              onPress={() => { }}
-            />
-          </View>
-        </ImageBackground>
+        }}> */}
+        <View style={FOOTER_GO}>
+          <Button
+            style={GO}
+            textStyle={GO_TEXT}
+            tx="clientInscriptionScreenScreen.go"
+            onPress={() => { }}
+          />
+        </View>
+        {/* </ImageBackground> */}
       </Screen >
     )
   }
