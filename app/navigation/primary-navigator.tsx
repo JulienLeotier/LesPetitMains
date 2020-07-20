@@ -6,7 +6,8 @@
  */
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
-import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreenScreen, clientInscriptionScreenScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreen, ClientInscriptionScreen } from "../screens"
+import { ProConnexionScreen } from "../screens/proConnexion-screen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -21,6 +22,7 @@ import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreenScreen
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type PrimaryParamList = {
+  proConnexion: undefined
   clientConnexion: undefined
   clientInscription: undefined
   connexion: undefined
@@ -40,8 +42,9 @@ export function PrimaryNavigator() {
       }}
     >
       <Stack.Screen name="connexion" component={ConnexionScreen} />
-      <Stack.Screen name="clientConnexion" component={ClientConnexionScreenScreen} />
-      <Stack.Screen name="clientInscription" component={clientInscriptionScreenScreen} />
+      <Stack.Screen name="proConnexion" component={ProConnexionScreen} />
+      <Stack.Screen name="clientConnexion" component={ClientConnexionScreen} />
+      <Stack.Screen name="clientInscription" component={ClientInscriptionScreen} />
       <Stack.Screen name="welcome" component={WelcomeScreen} />
       <Stack.Screen name="demo" component={DemoScreen} />
     </Stack.Navigator>

@@ -42,6 +42,17 @@
         "forgetPassword": "Mot de passe oublié ? ",
         "stayCo": "Rester Connecté(e)"
     },
+    "proConexion": {
+        "header": "Connexion",
+        "register": "Pas encore inscrit ?",
+        "facebook": "Connexion avec Facebook",
+        "google": "Connexion avec Google",
+        "mail": "Adresse e-mail",
+        "password": "Mot de passe",
+        "go": "C'est parti !",
+        "forgetPassword": "Mot de passe oublié ? ",
+        "stayCo": "Rester Connecté(e)"
+    },
     "clientInscriptionScreenScreen": {
         "header": "Inscription",
         "register": "Déjà client ?",

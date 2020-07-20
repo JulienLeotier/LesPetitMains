@@ -72,7 +72,7 @@ export const ConnexionScreen: Component = observer(function ConnexionScreen() {
     const navigation = useNavigation()
     const connexion = () => navigation.navigate("clientConnexion")
     const newConnexion = () => navigation.navigate("clientInscription")
-    const proConnexion = () => navigation.navigate("welcome")
+    const proConnexion = () => navigation.navigate("proConnexion")
 
 
     return (
