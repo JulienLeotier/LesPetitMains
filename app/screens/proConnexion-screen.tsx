@@ -4,6 +4,7 @@ import { ViewStyle, TextStyle, View, ImageBackground, Dimensions, Image, ImageSt
 import { Button, Screen, Text } from "../components"
 import { color, spacing } from "../theme"
 import { Input } from 'react-native-elements'
+import { TouchableOpacity } from "react-native-gesture-handler"
 
 
 
@@ -57,7 +58,7 @@ const pastry = require("./connexion-screen/patisier.png")
 const image = require("./connexion-screen/fouet.png")
 
 
-export class ProConnexionScreen extends Component<{}, { y: number }> {
+export class ProConnexionScreen extends Component<{ navigation }, { y: number }> {
   constructor(props) {
     super(props)
     this.state = {
@@ -73,15 +74,24 @@ export class ProConnexionScreen extends Component<{}, { y: number }> {
     this.setState({ y: height })
   }
   render() {
+    const { navigation } = this.props;
     return (
       <Screen style={ROOT} preset="scroll">
         <View onLayout={(event) => { this.find_dimesions(event.nativeEvent.layout) }}>
           <Image source={pastry} style={PASTRY} />
           <Text style={TEXT} preset="header" tx="proConexion.header" />
-          <Text style={TEXT_REGISTER} tx="proConexion.register" />
+          <TouchableOpacity
+            onPress={() => navigation.navigate('proInscription')}
+          >
+            <Text style={TEXT_REGISTER} tx="proConexion.register" />
+          </TouchableOpacity>
           <Text style={TEXT_FORMS} tx="proConexion.mail" />
           <Input
             inputStyle={INPUT}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
             placeholder='martin@muller.com'
           />
 
@@ -89,6 +99,10 @@ export class ProConnexionScreen extends Component<{}, { y: number }> {
           <Input
             inputStyle={INPUT}
             secureTextEntry={true}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
             placeholder='Mot de passe'
           />
         </View>

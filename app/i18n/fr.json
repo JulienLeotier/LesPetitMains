@@ -63,5 +63,16 @@
         "go": "C'est parti !",
         "rePassword": "Confirmer le mot de passe",
         "stayCo": "J'accepte les conditions générale d'utilisation"
+    },
+    "proInscription": {
+        "header": "Inscription",
+        "register": "Déjà client ?",
+        "facebook": "S'inscription avec Facebook",
+        "google": "S'inscription avec Google",
+        "mail": "Adresse e-mail",
+        "password": "Mot de passe",
+        "go": "C'est parti !",
+        "rePassword": "Confirmer le mot de passe",
+        "stayCo": "J'accepte les conditions générale d'utilisation"
     }
 }

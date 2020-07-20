@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { observer } from "mobx-react-lite"
 import { ViewStyle, TextStyle, View, ImageBackground, Dimensions } from "react-native"
 import { Button, Screen, Text } from "../components"
 import { color, spacing } from "../theme"
@@ -132,12 +131,20 @@ export class ClientInscriptionScreen extends Component<{}, { y: number }> {
           <Text style={TEXT_FORMS} tx="clientInscriptionScreenScreen.mail" />
           <Input
             inputStyle={INPUT}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
             placeholder='martin@muller.com'
           />
 
           <Text style={TEXT_FORMS} tx="clientInscriptionScreenScreen.password" />
           <Input
             inputStyle={INPUT}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
             secureTextEntry={true}
             placeholder='Mot de passe'
           />
@@ -145,6 +152,10 @@ export class ClientInscriptionScreen extends Component<{}, { y: number }> {
 
           <Input
             inputStyle={INPUT}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
             secureTextEntry={true}
             placeholder='Mot de passe'
           />

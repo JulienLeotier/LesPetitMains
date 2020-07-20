@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { observer } from "mobx-react-lite"
 import { ViewStyle, TextStyle, View, ImageBackground, Dimensions } from "react-native"
 import { Button, Screen, Text } from "../components"
 import { color, spacing } from "../theme"
@@ -134,6 +133,10 @@ export class ClientConnexionScreen extends Component<{}, { y: number }> {
           <Text style={TEXT_FORMS} tx="clientConnexionScreenScreen.mail" />
           <Input
             inputStyle={INPUT}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
             placeholder='martin@muller.com'
           />
 
@@ -141,6 +144,10 @@ export class ClientConnexionScreen extends Component<{}, { y: number }> {
           <Input
             inputStyle={INPUT}
             secureTextEntry={true}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
             placeholder='Mot de passe'
           />
         </View>
