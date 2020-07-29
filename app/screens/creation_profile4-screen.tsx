@@ -95,7 +95,7 @@ export class CreationProfile4Screen extends Component<{ navigation }, { y: numbe
             style={GO}
             textStyle={GO_TEXT}
             tx="crea4.go"
-            onPress={() => { navigation.navigate('formulePro') }}
+            onPress={() => { navigation.navigate('creaVit1') }}
           />
         </View>
       </Screen >

@@ -6,7 +6,7 @@
  */
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
-import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreen, ClientInscriptionScreen, ProInscriptionScreen, FormuleProScreen, CreationProfile1Screen, CreationProfile2Screen, CreationProfile3Screen, CreationProfile4Screen } from "../screens"
+import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreen, ClientInscriptionScreen, ProInscriptionScreen, FormuleProScreen, CreationProfile1Screen, CreationProfile2Screen, CreationProfile3Screen, CreationProfile4Screen, CreationVitrine1Screen, CreationVitrine2Screen } from "../screens"
 import { ProConnexionScreen } from "../screens/proConnexion-screen"
 
 /**
@@ -26,6 +26,8 @@ export type PrimaryParamList = {
   creaPro2: undefined
   creaPro3: undefined
   creaPro4: undefined
+  creaVit1: undefined
+  creaVit2: undefined
   creationProfile1: undefined
   proConnexion: undefined
   proInscription: undefined
@@ -55,6 +57,9 @@ export function PrimaryNavigator() {
       <Stack.Screen name="creaPro2" component={CreationProfile2Screen} />
       <Stack.Screen name="creaPro3" component={CreationProfile3Screen} />
       <Stack.Screen name="creaPro4" component={CreationProfile4Screen} />
+      <Stack.Screen name="creaVit1" component={CreationVitrine1Screen} />
+      <Stack.Screen name="creaVit2" component={CreationVitrine2Screen} />
+
       <Stack.Screen name="clientConnexion" component={ClientConnexionScreen} />
       <Stack.Screen name="clientInscription" component={ClientInscriptionScreen} />
       <Stack.Screen name="welcome" component={WelcomeScreen} />

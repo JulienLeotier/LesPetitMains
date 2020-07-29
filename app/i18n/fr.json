@@ -122,5 +122,33 @@
         "tel": "Téléphone",
         "go": "Poursuivre",
         "title": "Coordonnées bancaires"
+    },
+    "vitr1": {
+        "header": "CRÉATION VITRINE (1/3)",
+        "prenom": "Dénomination",
+        "nom": "SIRET / SIREN",
+        "adresse": "Adresse",
+        "coAdresse": "Complément d'adresse",
+        "zipCode": "Code Postal",
+        "city": "Ville",
+        "tel": "Téléphone",
+        "go": "Poursuivre",
+        "text": "Je propose des gâteaux de fête sur-mesure  (les utilisateurs pourront vous envoyer des demandes de devis personnalisés) :",
+        "text2": "Photo de profil / Logo",
+        "title": "Votre boutique"
+    },
+    "vitr2": {
+        "header": "CRÉATION VITRINE (2/3)",
+        "horraire": "Horaires d’ouverture de la boutique physique",
+        "zone": "Zone de livraison :",
+        "horraireZone": "Horraire de livraison",
+        "frais": "Frais de livraison",
+        "zipCode": "Code Postal",
+        "city": "Ville",
+        "tel": "Téléphone",
+        "go": "Poursuivre",
+        "text": "Je propose la livraison à domicile :",
+        "text2": "Photo de profil / Logo",
+        "title": "Horaires & disponibilité"
     }
 }
