@@ -6,7 +6,7 @@
  */
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
-import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreen, ClientInscriptionScreen, ProInscriptionScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreen, ClientInscriptionScreen, ProInscriptionScreen, FormuleProScreen } from "../screens"
 import { ProConnexionScreen } from "../screens/proConnexion-screen"
 
 /**
@@ -22,6 +22,7 @@ import { ProConnexionScreen } from "../screens/proConnexion-screen"
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type PrimaryParamList = {
+  formulePro: undefined
   proConnexion: undefined
   proInscription: undefined
   clientConnexion: undefined
@@ -45,6 +46,7 @@ export function PrimaryNavigator() {
       <Stack.Screen name="connexion" component={ConnexionScreen} />
       <Stack.Screen name="proConnexion" component={ProConnexionScreen} />
       <Stack.Screen name="proInscription" component={ProInscriptionScreen} />
+      <Stack.Screen name="formulePro" component={FormuleProScreen} />
       <Stack.Screen name="clientConnexion" component={ClientConnexionScreen} />
       <Stack.Screen name="clientInscription" component={ClientInscriptionScreen} />
       <Stack.Screen name="welcome" component={WelcomeScreen} />

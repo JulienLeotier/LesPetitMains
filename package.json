@@ -48,6 +48,7 @@
     "react-native-safe-area-view": "^1.1.1",
     "react-native-screens": "~2.9.0",
     "react-native-splash-screen": "3.2.0",
+    "react-native-table-component": "^1.2.1",
     "react-native-vector-icons": "^7.0.0",
     "react-native-web": "~0.11.7",
     "react-navigation": "^4.4.0",
@@ -91,7 +92,7 @@
     "react-devtools-core": "4.5.0",
     "react-powerplug": "1.0.0",
     "rimraf": "3.0.2",
-    "solidarity": "2.3.1",
+    "solidarity": "^3.0.0",
     "typescript": "3.9.3"
   },
   "private": true,

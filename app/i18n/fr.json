@@ -70,5 +70,9 @@
         "go": "Je me lance !",
         "rePassword": "Confirmer le mot de passe",
         "stayCo": "J'accepte les conditions générales d'utilisation"
+    },
+    "formulePro": {
+        "header": "Formule",
+        "go": "Poursuivre!"
     }
 }

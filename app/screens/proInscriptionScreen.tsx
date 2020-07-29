@@ -140,7 +140,7 @@ export class ProInscriptionScreen extends Component<{ navigation }, { y: number,
                         style={GO}
                         textStyle={GO_TEXT}
                         tx="proInscription.go"
-                        onPress={() => { }}
+                        onPress={() => { navigation.navigate('formulePro') }}
                     />
                 </View>
                 {/* </ImageBackground> */}

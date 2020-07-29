@@ -1,4 +1,5 @@
-import * as Font from "expo-font"
+import { Font } from 'expo';
+import * as FontAwesome from "@expo/vector-icon";
 
 export const initFonts = async () => {
   // Refer to ./assets/fonts/custom-fonts.md for instructions.
