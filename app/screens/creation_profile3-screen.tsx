@@ -15,6 +15,7 @@ const TEXT: TextStyle = {
   margin: '3%',
   fontSize: 14
 }
+
 const GO_TEXT: TextStyle = {
   color: "#FFFFFF",
   fontSize: 13,
@@ -38,7 +39,7 @@ const INPUT: ViewStyle = {
   paddingHorizontal: spacing[2]
 }
 // const image = require("./connexion-screen/fouet.png")
-export class CreationProfile1Screen extends Component<{ navigation }, { y: number, checked: boolean }> {
+export class CreationProfile3Screen extends Component<{ navigation }, { y: number, checked: boolean }> {
   constructor(props) {
     super(props)
     this.state = {
@@ -59,23 +60,15 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
     return (
       <Screen style={ROOT} preset="scroll">
         <View onLayout={(event) => { this.find_dimesions(event.nativeEvent.layout) }}>
-          <Text style={TEXT} preset="header" tx="crea1.header" />
-          <Text style={{ backgroundColor: "#B36F61", textAlign: 'left', width: '90%', height: '5%', paddingLeft: "5%", marginLeft: 'auto', marginRight: 'auto' }} tx="crea1.title" />
+          <Text style={TEXT} preset="header" tx="crea3.header" />
+          <Text style={{ backgroundColor: "#B36F61", textAlign: 'left', width: '90%', height: '10%', paddingLeft: "5%", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10%' }} tx="crea3.title" />
           <Input
             inputStyle={INPUT}
             inputContainerStyle={{
               alignSelf: "center",
               width: "90%"
             }}
-            placeholder='Prénom'
-          />
-          <Input
-            inputStyle={INPUT}
-            inputContainerStyle={{
-              alignSelf: "center",
-              width: "90%"
-            }}
-            placeholder='Nom'
+            placeholder='MARTIN MULLER'
           />
 
           <Input
@@ -84,18 +77,9 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
               alignSelf: "center",
               width: "90%"
             }}
-            placeholder='Adresse'
+            placeholder='Numéro de la carte'
           />
 
-          <Input
-            inputStyle={INPUT}
-            inputContainerStyle={{
-              alignSelf: "center",
-              width: "90%"
-            }}
-            secureTextEntry={true}
-            placeholder='Etage/ Bâtiment'
-          />
           <View style={{ flex: 1, flexDirection: 'row' }}>
             <View style={{ flex: 1, flexDirection: 'column' }}>
 
@@ -106,11 +90,10 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
                   width: "70%"
                 }}
                 secureTextEntry={true}
-                placeholder='Code Postal'
+                placeholder='MM/AAAA'
               />
             </View>
             <View style={{ flex: 1, flexDirection: 'column' }}>
-
               <Input
                 inputStyle={{}}
                 inputContainerStyle={{
@@ -118,29 +101,18 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
                   width: "70%"
                 }}
                 secureTextEntry={true}
-                placeholder='Ville'
+                placeholder='654'
               />
             </View>
           </View>
-
-          <Input
-            inputStyle={INPUT}
-            inputContainerStyle={{
-              alignSelf: "center",
-              width: "90%"
-            }}
-            secureTextEntry={true}
-            placeholder='0646883007'
-          />
-
         </View>
 
         <View style={FOOTER_GO}>
           <Button
             style={GO}
             textStyle={GO_TEXT}
-            tx="crea1.go"
-            onPress={() => { navigation.navigate('creaPro2') }}
+            tx="crea3.go"
+            onPress={() => { navigation.navigate('creaPro4') }}
           />
         </View>
       </Screen >

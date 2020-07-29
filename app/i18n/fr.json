@@ -84,6 +84,43 @@
         "zipCode": "Code Postal",
         "city": "Ville",
         "tel": "Téléphone",
-        "go": "Poursuivre"
+        "go": "Poursuivre",
+        "title": "Vos coordonnées"
+    },
+    "crea2": {
+        "header": "CRÉATION PROFILE (2/4)",
+        "prenom": "Dénomination",
+        "nom": "SIRET / SIREN",
+        "adresse": "Adresse",
+        "coAdresse": "Complément d'adresse",
+        "zipCode": "Code Postal",
+        "city": "Ville",
+        "tel": "Téléphone",
+        "go": "Poursuivre",
+        "title": "L'entreprise"
+    },
+    "crea3": {
+        "header": "CRÉATION PROFILE (3/4)",
+        "prenom": "Dénomination",
+        "nom": "SIRET / SIREN",
+        "adresse": "Adresse",
+        "coAdresse": "Complément d'adresse",
+        "zipCode": "Code Postal",
+        "city": "Ville",
+        "tel": "Téléphone",
+        "go": "Poursuivre",
+        "title": "Moyen de paiement"
+    },
+    "crea4": {
+        "header": "CRÉATION PROFILE (4/4)",
+        "prenom": "Dénomination",
+        "nom": "SIRET / SIREN",
+        "adresse": "Adresse",
+        "coAdresse": "Complément d'adresse",
+        "zipCode": "Code Postal",
+        "city": "Ville",
+        "tel": "Téléphone",
+        "go": "Poursuivre",
+        "title": "Coordonnées bancaires"
     }
 }

@@ -15,6 +15,7 @@ const TEXT: TextStyle = {
   margin: '3%',
   fontSize: 14
 }
+
 const GO_TEXT: TextStyle = {
   color: "#FFFFFF",
   fontSize: 13,
@@ -38,7 +39,7 @@ const INPUT: ViewStyle = {
   paddingHorizontal: spacing[2]
 }
 // const image = require("./connexion-screen/fouet.png")
-export class CreationProfile1Screen extends Component<{ navigation }, { y: number, checked: boolean }> {
+export class CreationProfile2Screen extends Component<{ navigation }, { y: number, checked: boolean }> {
   constructor(props) {
     super(props)
     this.state = {
@@ -59,25 +60,35 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
     return (
       <Screen style={ROOT} preset="scroll">
         <View onLayout={(event) => { this.find_dimesions(event.nativeEvent.layout) }}>
-          <Text style={TEXT} preset="header" tx="crea1.header" />
-          <Text style={{ backgroundColor: "#B36F61", textAlign: 'left', width: '90%', height: '5%', paddingLeft: "5%", marginLeft: 'auto', marginRight: 'auto' }} tx="crea1.title" />
+          <Text style={TEXT} preset="header" tx="crea2.header" />
+          <Text style={{
+            backgroundColor: "#B36F61",
+            textAlign: 'left',
+            alignSelf: 'center',
+            width: '90%',
+            height: '5%',
+            paddingLeft: "5%",
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginBottom: "10%"
+          }} tx="crea2.title" />
           <Input
             inputStyle={INPUT}
             inputContainerStyle={{
               alignSelf: "center",
               width: "90%"
             }}
-            placeholder='Prénom'
-          />
-          <Input
-            inputStyle={INPUT}
-            inputContainerStyle={{
-              alignSelf: "center",
-              width: "90%"
-            }}
-            placeholder='Nom'
+            placeholder='Dénomination sociale'
           />
 
+          <Input
+            inputStyle={INPUT}
+            inputContainerStyle={{
+              alignSelf: "center",
+              width: "90%"
+            }}
+            placeholder='SIRET / SIREN'
+          />
           <Input
             inputStyle={INPUT}
             inputContainerStyle={{
@@ -86,7 +97,6 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
             }}
             placeholder='Adresse'
           />
-
           <Input
             inputStyle={INPUT}
             inputContainerStyle={{
@@ -98,7 +108,6 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
           />
           <View style={{ flex: 1, flexDirection: 'row' }}>
             <View style={{ flex: 1, flexDirection: 'column' }}>
-
               <Input
                 inputStyle={{}}
                 inputContainerStyle={{
@@ -110,7 +119,6 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
               />
             </View>
             <View style={{ flex: 1, flexDirection: 'column' }}>
-
               <Input
                 inputStyle={{}}
                 inputContainerStyle={{
@@ -130,7 +138,7 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
               width: "90%"
             }}
             secureTextEntry={true}
-            placeholder='0646883007'
+            placeholder='Téléphone'
           />
 
         </View>
@@ -139,8 +147,8 @@ export class CreationProfile1Screen extends Component<{ navigation }, { y: numbe
           <Button
             style={GO}
             textStyle={GO_TEXT}
-            tx="crea1.go"
-            onPress={() => { navigation.navigate('creaPro2') }}
+            tx="crea2.go"
+            onPress={() => { navigation.navigate('creaPro3') }}
           />
         </View>
       </Screen >
