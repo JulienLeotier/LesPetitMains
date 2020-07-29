@@ -6,7 +6,7 @@
  */
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
-import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreen, ClientInscriptionScreen, ProInscriptionScreen, FormuleProScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, ConnexionScreen, ClientConnexionScreen, ClientInscriptionScreen, ProInscriptionScreen, FormuleProScreen, CreationProfile1Screen } from "../screens"
 import { ProConnexionScreen } from "../screens/proConnexion-screen"
 
 /**
@@ -23,6 +23,7 @@ import { ProConnexionScreen } from "../screens/proConnexion-screen"
  */
 export type PrimaryParamList = {
   formulePro: undefined
+  creationProfile1: undefined
   proConnexion: undefined
   proInscription: undefined
   clientConnexion: undefined
@@ -47,6 +48,7 @@ export function PrimaryNavigator() {
       <Stack.Screen name="proConnexion" component={ProConnexionScreen} />
       <Stack.Screen name="proInscription" component={ProInscriptionScreen} />
       <Stack.Screen name="formulePro" component={FormuleProScreen} />
+      <Stack.Screen name="creationProfile1" component={CreationProfile1Screen} />
       <Stack.Screen name="clientConnexion" component={ClientConnexionScreen} />
       <Stack.Screen name="clientInscription" component={ClientInscriptionScreen} />
       <Stack.Screen name="welcome" component={WelcomeScreen} />

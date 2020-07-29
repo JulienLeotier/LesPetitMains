@@ -73,6 +73,17 @@
     },
     "formulePro": {
         "header": "Formule",
-        "go": "Poursuivre!"
+        "go": "Poursuivre"
+    },
+    "crea1": {
+        "header": "CRÉATION PROFILE (1/4)",
+        "prenom": "Prénom",
+        "nom": "Nom",
+        "adresse": "Adresse",
+        "coAdresse": "Complément d'adresse",
+        "zipCode": "Code Postal",
+        "city": "Ville",
+        "tel": "Téléphone",
+        "go": "Poursuivre"
     }
 }

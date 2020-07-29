@@ -1,5 +1,5 @@
-import { Font } from 'expo';
-import * as FontAwesome from "@expo/vector-icon";
+import * as Font from 'expo-font';
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
 export const initFonts = async () => {
   // Refer to ./assets/fonts/custom-fonts.md for instructions.
@@ -10,4 +10,8 @@ export const initFonts = async () => {
   //   Montserrat: require("./Montserrat-Regular.ttf"),
   //   "Montserrat-Regular": require("./Montserrat-Regular.ttf"),
   // })
+
+  const fontAssets = [FontAwesome.font, MaterialIcons.font].map(font => Font.loadAsync(font));
+
+  await Promise.all([...fontAssets]);
 }
