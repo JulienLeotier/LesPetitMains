@@ -150,5 +150,19 @@
         "text": "Je propose la livraison à domicile :",
         "text2": "Photo de profil / Logo",
         "title": "Horaires & disponibilité"
+    },
+    "creaVit3": {
+        "header": "CRÉATION VITRINE (3/3)",
+        "horraire": "Horaires d’ouverture de la boutique physique",
+        "zone": "Zone de livraison :",
+        "horraireZone": "Horraire de livraison",
+        "frais": "Frais de livraison",
+        "zipCode": "Code Postal",
+        "city": "Ville",
+        "tel": "Téléphone",
+        "go": "Enregistré",
+        "text": "Je propose la livraison à domicile :",
+        "text2": "Photo de profil / Logo",
+        "title": "Ajout d'un produit"
     }
 }

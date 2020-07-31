@@ -130,7 +130,7 @@ export class CreationVitrine2Screen extends Component<{ navigation }, { y: numbe
             style={GO}
             textStyle={GO_TEXT}
             tx="vitr2.go"
-            onPress={() => { navigation.navigate('creaVit2') }}
+            onPress={() => { navigation.navigate('creaVit3') }}
           />
         </View>
       </Screen >
